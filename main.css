@@ -1,0 +1,233 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.rtob{
+  animation-name: rtobanim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.btor{
+  animation-name: btoranim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btoranim{
+  0%{background-color: rgb(21, 124, 199);}
+  100%{background-color: rgb(158, 29, 29)}
+}
+@keyframes rtobanim{
+  0%{background-color: rgb(158, 29, 29)}
+  100%{background-color: rgb(21, 124, 199);}
+}
+
+.toDark{
+  animation-name: darkanim;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+@keyframes darkanim {
+  0%{opacity: 0; visibility: hidden;}
+  100%{opacity: 0.5; visibility: visible;}
+}
+
+.moveIn{
+  animation-name: translateX;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+@keyframes translateX {
+  0%{transform: translateX(100vw); opacity: 0; visibility: hidden;}
+  100%{transform: translateX(0vw); opacity: 1; visibility: visible;}
+}
+
+#tex {
+  text-align: center;
+  font-size: 10vw;
+  margin-top: 26vh;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+#prime {
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: white;
+  opacity: 0.8;
+}
+#info {
+  margin-top: 2vh;
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: white;
+}
+#linkwhat{
+  margin-top: 3vh;
+  margin-right: 3vh;
+  width: 15px;
+  height: auto;
+  cursor: pointer;
+}
+#container{
+  text-align: right;
+}
+.copyright{
+  margin-top:95vh;
+  font-size: 0.6vw;
+  color:white;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-align: center;
+}
+#footer{
+  width:100vw;
+  height:100vh;
+  position: fixed;
+}
+
+#calculator{
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  text-align: center;
+}
+
+#dark{
+  width:100vw;
+  height:100vh;
+  background-color: black;
+  opacity:0;
+  visibility: hidden;
+  position: absolute;
+}
+
+#whatisprime{
+  margin-left: 7.5vw;
+  margin-top: 7.5vh;
+  width:85vw;
+  height:85vh;
+  background-color: rgba(255, 255, 255, 0.78);
+  -webkit-box-shadow: 0px 11px 31px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 11px 31px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 11px 31px 0px rgba(0,0,0,0.75);
+  border-radius: 25px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100vw);
+}
+
+
+.title {
+  text-align: left;
+  font-size: 3vw;
+  font-weight: 500;
+  color: rgb(21, 124, 199);
+  opacity: 0.8;
+  margin-left: 5vw;
+  margin-top: 1vw;
+}
+.subtitle {
+  text-align: left;
+  font-size: 14pt;
+  font-weight: 300;
+  color: rgb(21, 124, 199);
+  opacity: 0.8;
+  margin-left: 5vw;
+  margin-top: 1vw;
+}
+.infoPrime {
+  margin-top: 0.2vh;
+  margin-left: 7vw;
+  margin-right: 10vw;
+  font-size: 10pt;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: rgb(71, 71, 71);
+}
+#info1{
+  margin-top: 1vh;
+}
+.bold{
+  font-weight: 600;
+}
+#linkback{
+  margin-top: 5vh;
+  width: 50px;
+  height:auto;
+  margin-left: 5vw;
+  cursor: pointer;
+}
+#mobileInfo{
+  display: none;
+}
+#mobileInfo span{
+  font-weight: 500;
+}
+
+
+@media only screen and (max-device-width: 768px) {
+  #dark{
+    opacity: 0.5;
+    visibility: visible;
+  }
+  #whatisprime{
+    margin-top: 35vh;
+    height: 30vh;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  .title{
+    visibility: hidden;
+  }
+  .infoPrime{
+    visibility: hidden;
+  }
+  .subtitle{
+    visibility: hidden;
+  }
+  #linkback{
+    visibility: hidden;
+  }
+  #mobileInfo{
+    text-align: center;
+    color: rgb(71, 71, 71);
+    font-size: 4vw;
+    font-weight: 300;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: visible;
+    opacity: 1;
+  }
+}
